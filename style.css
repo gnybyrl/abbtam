@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.main {
+    margin: 40px 0;
+}
+
+.tab {
+    text-align: center;
+    
+}
+
+.tab h1 {
+    font-size: 3em;
+    font-weight: 400;
+    padding: 15px 0;
+}
+
+.tab button {
+    color: #5c5d5e;
+    border-radius: 7px;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+}
+
+#kredit {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding-top: 60px;
+}
+
+.sol {
+    width: 500px;
+    margin-bottom: 30px;
+}
+
+.top, .maxmin {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    margin: 5px 0;
+    width: 100%;
+    color: #7A7D82;
+}
+
+.top span{
+    font-weight: 600;
+    font-size: 1.3em;
+    color: black;
+}
+
+.rangeler {
+    padding: 10px 0;
+}
+
+.sag {
+    width: 400px;    
+}
+
+.sag h5 {
+    text-align: center;
+    padding: 10px 0;
+    color: #5c5d5e;
+    font-weight: lighter;
+    font-size: 1em;
+}
+
+.blue {
+    background-color: #1b63ed;
+    border-radius: 20px;
+    padding: 35px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.blue h2 {
+    padding: 10px 0;
+    font-size: 2.3em;
+    font-weight: lighter;
+}
+
+.dvmBtn {
+    background-color: white;
+    height: 50px;
+    width: 85%;
+    border-radius: 10px;
+    border: none;
+    font-weight: 400;
+    font-size: 1.3em;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+#depozit {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding-top: 60px;
+}
+
+hr {
+    width: 85%;
+    opacity: 0.3;
+}
+
+.cols {
+    padding: 15px 0;
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+
+.cols h4 {
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.cols h3{
+    padding: 8px 0;
+    font-weight: 500;
+    font-size: 1.9em;
+}
+
+#aylar h5 {
+    color: #5c5d5e;
+    font-weight: lighter;
+    font-size: 1em;
+    padding: 20px 0;
+}
+
+#aylar button {
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 50%;
+    font-size: 1em;
+}
+
+.depozitUst {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.zaman , .currency {
+    background-color: #c8cacd;
+    border-radius: 10px;
+    height: 40px;
+    padding: 3px;
+}
+
+.zaman button, .currency button {
+    background-color: inherit;
+    margin: 3px;
+    align-items: center;
+    height: 85%;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+#avtomobil {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding-top: 60px;
+}
+
+#avtoBlue {
+    padding: 3px 13px;
+
+}
+
+#avtoBlue h4 {
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+#avtoBlue h3{
+    padding: 8px 0;
+    font-weight: 500;
+    font-size: 1.9em;
+}
+
+#avtoBlue td {
+    width: 50%;
+    padding: 5px;
+}
+
+#ipoteka {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding-top: 60px;
+}
+
+#derece h5 {
+    color: #5c5d5e;
+    font-weight: lighter;
+    font-size: 1em;
+    padding: 20px 0;
+}
+
+#derece button {
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 50%;
+    font-size: 1em;
+}
+
+
+
+
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #1b63ed;
+  border-radius: 6px;
+  height: 20px;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: 4px; /* Centers thumb on the track */
+  background-color: #ffffff;
+  border-radius: 3px;
+  height: 12px;
+  width: 5px;
+}

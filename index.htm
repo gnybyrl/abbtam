@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="main">
+        <div class="tab">
+            <h1>İndi hesablayın</h1>
+            <button onclick="showKredit()" id="kreditBtn" class="active">Kredit</button>
+            <button onclick="showDepozit()" id="depozitBtn">Depozit</button>
+            <button onclick="showAvtomobil()" id="avtomobilBtn">Avtomobil Krediti</button>
+            <button onclick="showIpoteka()" id="ipotekaBtn">İpoteka</button>
+        </div>
+        <div id="kredit">
+            <div class="sol">
+                <div class="rangeler">
+                    <div class="top">
+                        <label>Məbləğ</label>
+                        <span class="value" id="kreditMebleg">5000 ₼</span>
+                    </div>
+                    <input type="range" class="range" min="300" max="50000" oninput="meblegDeyisK(this.value)" />
+                    <div class="maxmin">
+                        <span class="rangeQiymetleri">300 ₼</span>
+                        <span class="rangeQiymetleri">50000 ₼</span>
+                    </div>
+                </div>
+
+                <div class="rangeler">
+                    <div class="top">
+                        <label>Müddət
+                        </label>
+                        <span class="value" id="kreditMuddet">12 ay</span>
+                    </div>
+                    <input type="range" class="range" min="3" max="59" oninput="muddetDeyisK(this.value)" />
+                    <div class="maxmin">
+                        <span class="rangeQiymetleri">3 ay</span>
+                        <span class="rangeQiymetleri">59 ay</span>
+                    </div>
+                </div>
+
+                <div class="rangeler">
+                    <div class="top">
+                        <label>Faiz dərəcəsi
+                        </label>
+                        <span class="value" id="kreditFaiz">10.9 %</span>
+                    </div>
+                    <input type="range" class="range" min="10.9" max="37.7" step="0.1"
+                        oninput="faizDeyisK(this.value)" />
+                    <div class="maxmin">
+                        <span class="rangeQiymetleri">10.9 %</span>
+                        <span class="rangeQiymetleri">37.7 %</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="sag">
+                <div class="blue">
+                    <h4>Aylıq kredit ödənişi</h4>
+                    <h2 id="ntcKredit">234576 <span>₼</span></h2>
+                    <button class="dvmBtn">Davam et</button>
+                </div>
+                <h5>İlkin hesablama</h5>
+            </div>
+        </div>
+
+        <!--                       KREDIT BITDI                        -->
+
+
+        <div id="depozit">
+            <div class="sol">
+                <div class="depozitUst">
+                    <div class="zaman">
+                        <button id="ay" onclick="aylarBtn()">Hər ay</button>
+                        <button id="il" onclick="illerBtn()">Hər il</button>
+                    </div>
+                    <div class="currency">
+                        <button id="azn" onclick="aznBtn()">AZN</button>
+                        <button id="usd" onclick="usdBtn()">USD</button>
+                    </div>
+                </div>
+                <div class="top">
+                    <label>Məbləğ</label>
+                    <span class="value" id="depozitMebleg">5000 <span class="valyuta">₼</span></span>
+                </div>
+                <input type="range" class="range" id="rangeD" min="300" max="50000"
+                    oninput="meblegDeyisD(this.value)" />
+                <div class="maxmin">
+                    <span class="rangeQiymetleri">300 <span class="valyuta">₼</span></span>
+                    <span class="rangeQiymetleri">50000 <span class="valyuta">₼</span></span>
+                </div>
+                <div id="aylar">
+                    <div id="aylar">
+                        <h5>Müddət</h5>
+                        <button class="ayBtn">3</button>
+                        <button class="ayBtn">6</button>
+                        <button class="ayBtn">12</button>
+                        <button class="ayBtn">18</button>
+                        <button class="ayBtn">24</button>
+                        <button class="ayBtn">36</button>
+
+                        <button class="ilBtn" style="display:none;">1</button>
+                        <button class="ilBtn" style="display:none;">3</button>
+                        <button class="ilBtn" style="display:none;">6</button>
+                        <button class="ilBtn" style="display:none;">12</button>
+                        <button class="ilBtn" style="display:none;">18</button>
+</div>
+                </div>
+            </div>
+
+            <div class="sag">
+                <div class="blue">
+                    <h4>Umumi qazanc</h4>
+                    <h2 id="ntcDepozit">234576 <span class="valyuta">₼</span></h2>
+                    <hr />
+                    <div class="cols">
+                        <div>
+                            <h4>Her ay odenilen faiz</h4>
+                            <h3 id="faizAy">66.7 <span class="valyuta">₼</span></h3>
+                        </div>
+                        <div>
+                            <h4>Faiz derecesi</h4>
+                            <h3 id="faizDerece">8 <span> %</span></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AVTO KREDIT BASLADI -->
+
+        <div id="avtomobil">
+            <div class="sol">
+                <div class="depozitUst">
+                    <div class="zaman">
+                        <button id="elektrik" onclick="secElektrik()">Elektrik</button>
+                        <button id="hibrid" onclick="secHibrid()">Hibrid</button>
+                        <button id="diger" onclick="secDiger()">Diger</button>
+                    </div>
+                </div>
+                <div class="rangeler">
+                    <div class="top">
+                        <label>Avtomobilin qiyməti</label>
+                        <span class="value" id="avtoMebleg">5000 ₼</span>
+                    </div>
+                    <input type="range" class="range" min="300" max="500000" id="meblegDeyisA" />
+                    <div class="maxmin">
+                        <span class="rangeQiymetleri">300 ₼</span>
+                        <span class="rangeQiymetleri">500000 ₼</span>
+                    </div>
+                </div>
+
+                <div class="rangeler">
+                    <div class="top">
+                        <label>İlkin ödəniş faizi</label>
+                        <span class="value" id="avtoFaiz">40 %</span>
+                    </div>
+                    <input type="range" class="range" min="10" max="90" id="faizDeyisA" />
+                    <div class="maxmin">
+                        <span class="rangeQiymetleri" id="avtoMinQiymet">10 %</span>
+                        <span class="rangeQiymetleri"> 90 %</span>
+                    </div>
+                </div>
+
+                <div class="rangeler">
+                    <div class="top">
+                        <label>Kredit müddəti</label>
+                        <span class="value" id="avtoMuddet">3 ay</span>
+                    </div>
+                    <input type="range" class="range" min="3" max="60" id="muddetDeyisA" />
+                    <div class="maxmin">
+                        <span class="rangeQiymetleri">3 ay</span>
+                        <span class="rangeQiymetleri">60 ay</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="sag">
+                <div class="blue" id="avtoBlue">
+                    <h4>Aylıq kredit ödənişi</h4>
+                    <h2 id="ntcAvtomobil">234576 ₼</h2>
+                    <hr />
+                    <table>
+                        <tr>
+                            <td>
+                                <h4>Kredit məbləği</h4>
+                                <h3 id="kreditAvtomobil">270 ₼</h3>
+                            </td>
+                            <td>
+                                <h4>İllik faiz dərəcəsi</h4>
+                                <h3 id="faizAvtomobil">14 %</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Komissiya (0.5%, min 20 AZN)</h4>
+                                <h3 id="komissiyaAvtomobil">1500 ₼</h3>
+                            </td>
+                            <td>
+                                <h4>Ümumi ödəniş</h4>
+                                <h3 id="umumiAvtomobil">270 ₼</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <button class="dvmBtn">Davam et</button>
+                </div>
+                <h5>İlkin hesablama</h5>
+            </div>
+        </div>
+
+
+<!--           Avto bitdi -->
+
+
+        <div id="ipoteka">
+            <div class="sol">
+                <div class="rangeler">
+                    <div class="top">
+                        <label>Kredit məbləği</label>
+                        <span class="value" id="ipotekaMebleg">5000 ₼</span>
+                    </div>
+                    <input type="range" class="range" min="1" max="500000" id="meblegDeyisI" />
+                    <div class="maxmin">
+                        <span class="rangeQiymetleri">1 ₼</span>
+                        <span class="rangeQiymetleri">500000 ₼</span>
+                    </div>
+                </div>
+
+                <div class="rangeler">
+                    <div class="top">
+                        <label>İllik faiz dərəcəsi</label>
+                        <span class="value" id="ipotekaMuddet">1 il</span>
+                    </div>
+                    <input type="range" class="range" min="1" max="25" id="muddetDeyisI" />
+                    <div class="maxmin">
+                        <span class="rangeQiymetleri">1 il</span>
+                        <span class="rangeQiymetleri">25 il</span>
+                    </div>
+                </div>
+                <div id="derece">
+                    <h5>İllik faiz dərəcəsi</h5>
+                    <button onclick="faizSec(4)">4</button>
+                    <button onclick="faizSec(7)">7</button>
+                    <button onclick="faizSec(8)">8</button>
+                    <button onclick="faizSec(11)">11</button>
+                    <button onclick="faizSec(12)">12</button>
+                    <button onclick="faizSec(13)">13</button>
+                </div>
+            </div>
+            <div class="sag">
+                <div class="blue">
+                        <h4>Aylıq kredit ödənişi</h4>
+                        <h2 id="ntcIpoteka">234576 ₼ </h2>
+                        <hr />
+                        <div class="cols">
+                            <div>
+                                <h4>Kredit məbləği</h4>
+                                <h3 id="faizIl">1000 ₼</h3>
+                            </div>
+                            <div>
+                                <h4>İllik faiz derecesi</h4>
+                                <h3 id="illikDerece">4 %</h3>
+                            </div>
+                        </div>
+                        <button class="dvmBtn">Davam et</button>
+                </div>
+                <h5>İlkin hesablama</h5>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
