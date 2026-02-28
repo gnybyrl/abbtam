@@ -254,3 +254,35 @@ input[type="range"]::-webkit-slider-thumb {
   height: 12px;
   width: 5px;
 }
+
+
+
+@media screen and (max-width: 780px) {
+    #kredit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+    }
+
+    #depozit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+    }
+
+    #avtomobil {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+    }
+
+    #ipoteka {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+    }
+}
