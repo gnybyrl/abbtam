@@ -263,6 +263,8 @@ input[type="range"]::-webkit-slider-thumb {
         flex-direction: column;
         align-items: center;
         overflow-x: hidden;
+        gap: 15px;
+        padding-top: 15px;
     }
 
     #depozit {
@@ -270,6 +272,8 @@ input[type="range"]::-webkit-slider-thumb {
         flex-direction: column;
         align-items: center;
         overflow-x: hidden;
+        gap: 15px;
+        padding-top: 15px
     }
 
     #avtomobil {
@@ -277,6 +281,8 @@ input[type="range"]::-webkit-slider-thumb {
         flex-direction: column;
         align-items: center;
         overflow-x: hidden;
+        gap: 15px;
+        padding-top: 15px
     }
 
     #ipoteka {
@@ -284,13 +290,22 @@ input[type="range"]::-webkit-slider-thumb {
         flex-direction: column;
         align-items: center;
         overflow-x: hidden;
+        gap: 15px;
+        padding-top: 15px
     }
 
     .sol {
         width: 350px;
+        margin-bottom: 10px;
     }
 
     .sag {
         width: 350px;
     }
+
+    .main {
+        margin: 10px 0;
+    }
+    
+
 }
