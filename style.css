@@ -285,4 +285,12 @@ input[type="range"]::-webkit-slider-thumb {
         align-items: center;
         overflow-x: hidden;
     }
+
+    .sol {
+        width: 350px;
+    }
+
+    .sag {
+        width: 350px;
+    }
 }
